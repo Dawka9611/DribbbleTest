@@ -54,7 +54,6 @@ const CarouselStyle = styled.div`
     font-size: 1.2rem;
     text-align: center;
   }
-
   .next {
     right: 0;
   }

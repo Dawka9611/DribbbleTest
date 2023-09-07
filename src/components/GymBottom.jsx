@@ -22,7 +22,7 @@ const GymBottom = () => {
         <div className="flex justify-between pt-7 gap-8 bottomSection 2xl:flex-col">
             {/* left side of bottom with picture */}
             <div className="bottomLeft relative w-2/5 2xl:w-full">
-                <div className="text absolute top-7 right-6 text-5xl text-gray-800 text-right w-1/2 lg:text-4xl md:w-full md:text-3xl" >
+                <div className="text absolute top-7 right-6 text-4xl text-gray-800 text-right w-1/3 md:text-3xl lg:w-1/2" >
                     THE NEXT STEP IN THE SUCCESS OF WEIGHT LOSS
                 </div>
                 <div className="border-b-4 border-gray-800 absolute bottom-8 w-full" />

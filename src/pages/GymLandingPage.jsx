@@ -24,7 +24,7 @@ const GymLandingPage = () => {
                     <div className="text-2xl flex-shrink-0 text-white transition py-1 px-2 rounded tracking-wide">
                         {"\"The body achieves what the mind believes.\""}
                     </div>
-                    <div className="flex gap-10 pt-6 2xl:flex-col lg:gap-3">
+                    <div className="flex gap-10 pt-6 2xl:flex-col lg:gap-6">
                         <Link to='/empty' className=" bg-red-950 text-2xl text-white transition flex-shrink-0 hover:bg-red-900 font-bold py-4 px-5 rounded-lg">
                             JOIN NOW
                         </Link>
