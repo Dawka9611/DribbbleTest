@@ -5,6 +5,7 @@ import { FaBars } from 'react-icons/fa';
 import useWindowDimensions from "../hooks/useWindowDimensions";
 import DropdownMenu from './DropdownMenu';
 import { animated, useSpring } from '@react-spring/web'
+import Button from './button';
 
 const navElements = [
     { text: 'Home', link: '/' },
@@ -41,11 +42,11 @@ const GymNavigation = () => {
                     </div>
                     <div className="flex gap-6 justify-end flex-grow md:flex-col md:flex-shrink-0">
                         {width < 1300 ? (
-                            <div className=''>
-                                <button
-                                    onClick={() => setShowMenu(!showMenu)}>
-                                    <FaBars className="text-white text-5xl transition hover:text-red-900" />
-                                </button>
+                            <div>
+                                <Button
+                                    onClick={() => setShowMenu(!showMenu)} transparent = {true} customClassName={'navItem'}>
+                                    <FaBars className="text-white text-5xl" />
+                                </Button>
                                 {showMenu && <DropdownMenu data={navElements} isToggled={showMenu} />}
                             </div>
                         ) : (
@@ -60,9 +61,7 @@ const GymNavigation = () => {
                     </div>
                 </div>
                 <div className='flex-shrink-0 pt-0'>
-                    <button className=" bg-red-950 text-2xl text-white transition  hover:bg-red-900 font-bold py-3 px-4 rounded-lg">
-                        CONTACT US
-                    </button>
+                   <Button text='CONTACT US'/>
                 </div>
             </div>
         </div>
