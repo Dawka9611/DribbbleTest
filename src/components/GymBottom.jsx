@@ -1,8 +1,9 @@
 import prepare_for_run from '../assets/prepare_for_run.jpg';
 import weights from '../assets/weights.png';
 import { MdArrowForwardIos } from 'react-icons/md'
-import {BsChevronDown} from 'react-icons/bs'
-import useWindowDimensions from '../hooks/useWindowDimaensions';
+import { BsChevronDown } from 'react-icons/bs'
+import useWindowDimensions from '../hooks/useWindowDimensions';
+import { Link } from 'react-router-dom';
 
 const GymBottom = () => {
     const { width } = useWindowDimensions();
@@ -25,15 +26,15 @@ const GymBottom = () => {
                     THE NEXT STEP IN THE SUCCESS OF WEIGHT LOSS
                 </div>
                 <div className="border-b-4 border-gray-800 absolute bottom-8 w-full" />
-                <button className="border border-white absolute bottom-5 right-1/2 p-1 rounded-full bg-gray-800 ">
-                    <MdArrowForwardIos className="text-white" />
-                </button>
+                <Link to='/empty' className="border border-white absolute bottom-5 right-1/2 p-1 rounded-full bg-gray-800 text-white transition hover:scale-110">
+                    <MdArrowForwardIos />
+                </Link>
                 <img src={prepare_for_run} className="rounded-2xl w-full" alt={"\""} />
             </div>
             {/* right side of bottom with services */}
             <div className="flex flex-col flex-grow bg-red-950 rounded-3xl relative">
                 {/* title of services */}
-                <div className="servicesSection text-white text-3xl w-full font-bolder text-right pt-6">
+                <div className="servicesSection text-white text-3xl w-full font-bolder text-center pt-6">
                     OUR SERVICES
                 </div>
                 {/* service elements */}
@@ -41,20 +42,20 @@ const GymBottom = () => {
                     {columns.map((column, index) => (
                         <div key={index}>
                             {column.map((service, serviceIndex) => (
-                                <div key={serviceIndex} className="flex items-center gap-2">
+                                <Link to='/empty' key={serviceIndex} className="flex items-center gap-2 text-white transition hover:text-gray-500">
                                     <img src={weights} className="rounded-2xl w-6 flex-shrink-0" alt="*" />
-                                    <div className="text-white text-md flex-shrink-0">
+                                    <div className="text-md flex-shrink-0">
                                         {service}
                                     </div>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     ))}
                 </div>
                 <div className="border-b-2 border-white w-full absolute bottom-6" />
-                <button className="border border-white absolute bottom-4 right-1/2 p-1 rounded-full bg-red-950">
-                    <BsChevronDown className="text-white" />
-                </button>
+                <Link to='/empty' className="border border-white absolute bottom-4 right-1/2 p-1 rounded-full bg-red-950 text-white transition hover:scale-110 hover:text-gray-500 flex items-center">
+                    <BsChevronDown />
+                </Link>
             </div>
         </div>
     );

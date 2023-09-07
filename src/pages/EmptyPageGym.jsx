@@ -1,17 +1,11 @@
-import GymNavigation from "../components/gymNaviftions";
-import { GymPagaStyle } from "./GymLandingPage";
+import LayoutComponent from "../components/Layout";
 
 const EmptyPage = () => {
-    return <GymPagaStyle>
-        <div className="glassView backdrop-blur-none rounded-3xl">
-            <GymNavigation />
-            <div className="flex justify-center pt-20">
-                <div className="text-white font-bold tracking-wide text-3xl h-full">
-                    No content to show
-                </div>
-            </div>
+    return <LayoutComponent>
+        <div className="textBig text-6xl flex items-center justify-center h-96 text-white font-bold tracking-wide h-full">
+            No content to show
         </div>
-    </GymPagaStyle>
+    </LayoutComponent>
 }
 
 export default EmptyPage

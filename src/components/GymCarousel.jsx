@@ -16,7 +16,7 @@ const GymCarousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     return (
-        <CarouselStyle className="carousel-container w-full rounded-4xl">
+        <CarouselStyle className="carousel-container w-full rounded-4xl flex-grow">
             <Carousel
                 showArrows={true}
                 selectedItem={currentIndex}
